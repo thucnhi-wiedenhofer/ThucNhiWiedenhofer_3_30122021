@@ -1,0 +1,125 @@
+html {
+  font-size: 62.5%;
+  /*mobile first*/
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  html {
+    /*tablette*/
+    font-size: 100%;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("/Accueil-414.png");
+  width: 414px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 0%;
+}
+
+p {
+  color: #000000;
+  font-size: 1.8rem;
+  -webkit-margin-before: 0.7em;
+          margin-block-start: 0.7em;
+  -webkit-margin-after: 0.7em;
+          margin-block-end: 0.7em;
+}
+
+/*container pour XL screen*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.1rem 0;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+.muted {
+  color: #777171;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: #9356dc;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px #c7c1c1;
+  margin-bottom: 5px;
+}
+.header__logo {
+  width: 16rem;
+  padding-top: 2.2rem;
+  padding-bottom: 1.5rem;
+}
+.header__return {
+  width: 5rem;
+  padding: 1rem;
+}
+.header__button {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  background-color: #ffffff;
+}
+.header fa {
+  font-size: 15px;
+  color: #000000;
+}
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

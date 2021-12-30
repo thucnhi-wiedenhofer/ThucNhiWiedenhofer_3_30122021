@@ -1,0 +1,45 @@
+@use "base/variables";
+@use "base/mixins";
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px variables.$grey;
+  margin-bottom: 5px;
+
+  &__logo {
+    width: 16rem;
+    padding-top: 2.2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__return {
+    width: 5rem;
+    padding: 1rem;
+  }
+
+  &__button {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background-color: variables.$white;
+  }
+
+  fa {
+    font-size: 15px;
+    color: variables.$black;
+  }
+
+  
+
+  @include mixins.tablet {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @include mixins.desktop {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
