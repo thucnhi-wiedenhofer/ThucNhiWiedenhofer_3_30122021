@@ -4,10 +4,10 @@
 html {
   font-size: 62.5%; /*mobile first*/
   box-sizing: border-box;
-  @include mixins.tablet {
-    /*tablette*/
+  /*@include mixins.tablet {
+    
     font-size: 100%;
-  }
+  }*/
 }
 
 *,
@@ -18,11 +18,10 @@ html {
 
 body {
   font-family: variables.$font_principal;
-  background-image: url("../img/Accueil-414.png");
-  width: 414px;
+  background-image: url("../../../build/img/Accueil.png");
+  width: 375px;
   margin: 0 auto;
   background-repeat: no-repeat;
-  background-size: auto;
   background-position: 50% 0%;
 }
 

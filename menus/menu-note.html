@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accueil</title>
+    <title>La note enchantée</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,135 +14,76 @@
     <link rel="stylesheet" href="build/css/fontaws.css" />
     <link rel="stylesheet" href="build/css/style.css" />
   </head>
+
   <body>
-    <header class="header">
-      <div class="header__logo">
-        <img src="./build/img/ohmyfood.png" alt="logo" />
+    <header>
+      <div class="row">
+        <a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a>
+        <img class="logo" src="./src/img/ohmyfood.png" alt="logo" />
       </div>
     </header>
 
     <main>
-      <article class="search">
-        <form class="search__form">
-          <div class="search__form__localisation">
-            <span><i class="fa fa-map-marker-alt"></i></span>
-            <input
-              type="text"
-              name="search"
-              placeholder="Paris, Belleville"
-              aria-label="localisation"
-            />
+      <div class="menu-form">
+        <section class="menu-header">
+          <img src="./src/img/note-enchantee.jpg" alt="La note enchantée" />
+          <div class="restau-name">
+            <h1>La note enchantée</h1>
+            <i class="like fa fa-heart"></i>
           </div>
-          <h1 class="search__form__tittle">
-            Réservez le menu qui<br />vous convient
-          </h1>
-          <p class="search__form__text">
-            Découvrez des restaurants d'exeption,<br />selectonnés par nos
-            soins.
-          </p>
-          <button class="search__form__btn" type="submit">
-            Explorer nos restaurants
-          </button>
-        </form>
-      </article>
+        </section>
 
-      <section id="fonctionnement">
-        <h2>Fonctionnement</h2>
-        <div class="filtre">
-          <div class="btn-filtre">
-            <span class="badge">1</span>
-            <a href="#"
-              ><i class="fa fa-mobile-alt"></i>Choisissez un restaurant</a
-            >
-          </div>
-          <div class="btn-filtre">
-            <span class="badge">2</span>
-            <a href="#"><i class="fa fa-list-ul"></i>Composez votre menu</a>
-          </div>
-          <div class="btn-filtre">
-            <span class="badge">3</span>
-            <a href="#"><i class="fa fa-store"></i>Dégustez au restaurant</a>
-          </div>
-        </div>
-      </section>
+        <section class="starter">
+            <h2>ENTRÉES</h2>
+            <div class="starter">
+              <div class="menu-info">
+                <h3>Ravioles de Foie gras</h3>
+                <p>Accompagnés de leur crème à la truffe</p>
+                <span>25€</span>
+              </div>
+              <div class="checked" value="starter-1" name="starter" id="starter-1">
+                <i class="fa fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="starter">
+              <div class="menu-info">
+                <h3>Caviar osciètre </h3>
+                <p>Sur blini à la farine de blé noir</p>
+                <span>35€</span>
+              </div>
+              <div class="checked">
+                <i class="fa fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="starter">
+              <div class="menu-info">
+                <h3>Homard et espuma de potiron</h3>
+                <p>Mariné aux zestes d'orange</p>
+                <span>20€</span>
+              </div>
+              <div class="checked">
+                <i class="fa fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="starter">
+              <div class="menu-info">
+                <h3>Foie gras de canard cuit entier</h3>
+                <p>Confiture de figue et pain toasté</p>
+                <span>35€</span>
+              </div>
+              <div class="checked">
+                <i class="fa fa-check-circle"></i>
+              </div>
+            </div>
+        </section>
 
-      <section id="restaurants">
-        <h2>Restaurants</h2>
-        <div class="restaurant-card">
-          <div class="card">
-            <a href="./menus/menu-palette.html" target="blank">
-              <div class="card-header">
-                <img
-                  src="./src/img/palette-gout.jpg"
-                  alt="la palette du goût"
-                />
-                <p><span class="tag">Nouveau</span></p>
-              </div>
-              <div class="card-body">
-                <div class="card-info">
-                  <h3>palette du goût</h3>
-                  <p>Ménilmontant</p>
-                </div>
-                <div class="heart">
-                  <button><i class="like fa fa-heart"></i></button>
-                </div>
-              </div>
-            </a>
+        <section class="main-course">
+          <h2>PLATS</h2>
+          <div id="main-course-1">
+
           </div>
-          <div class="card">
-            <a href="./menus/menu-note.html" target="blank">
-              <div class="card-header">
-                <img
-                  src="./src/img/note-enchantee.jpg"
-                  alt="la note enchantée"
-                />
-                <p><span class="tag">Nouveau</span></p>
-              </div>
-              <div class="card-body">
-                <div class="card-info">
-                  <h3>La note enchantée</h3>
-                  <p>Charonne</p>
-                </div>
-                <div class="heart">
-                  <button><i class="like fa fa-heart"></i></button>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="card">
-            <a href="./menus/menu-francaise.html" target="blank">
-              <div class="card-header">
-                <img src="./src/img/francaise.jpg" alt="à la française" />
-              </div>
-              <div class="card-body">
-                <div class="card-info">
-                  <h3>A la française</h3>
-                  <p>Cité Rouge</p>
-                </div>
-                <div class="heart">
-                  <button><i class="like fa fa-heart"></i></button>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="card">
-            <a href="./menus/menu-delice.html" target="blank">
-              <div class="card-header">
-                <img src="./src/img/delice-sens.jpg" alt="Le délice des sens" />
-              </div>
-              <div class="card-body">
-                <div class="card-info">
-                  <h3>Le délice des senst</h3>
-                  <p>Folie-Méricourt</p>
-                </div>
-                <div class="heart">
-                  <button><i class="like fa fa-heart"></i></button>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <footer>
       <div class="footer-container">
@@ -200,7 +141,7 @@
             </li>
             <li class="footer-item"><a href="#">Mentions légales</a></li>
             <li class="footer-item">
-              <a href="mailto:contact@ohmyfood.fr" target="blank">Contact</a>
+              <a href="mailto:contact@ohmyfood.fr">Contact</a>
             </li>
           </ul>
         </nav>

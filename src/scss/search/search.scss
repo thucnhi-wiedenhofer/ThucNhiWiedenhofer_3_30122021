@@ -1,0 +1,54 @@
+@use "base/variables";
+@use "base/mixins";
+
+input {
+  border: none;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: variables.$black;
+  padding: 0 1.6rem;
+}
+
+.search {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5.5rem;
+    background-color: variables.$grey-light;
+
+    &__localisation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-left: 6rem;
+      background-color: variables.$grey;
+      font-size: 1.7rem;
+      height: 4.8rem;
+      box-shadow: 0px 4px 2px variables.$grey-dark inset;
+    }
+
+    &__tittle {
+      margin-top: 4rem;
+      margin-right: 2rem;
+    }
+
+    &__btn {
+      font-size: 1.6rem;
+      color: variables.$white;
+      background: linear-gradient(variables.$secondary, variables.$primary);
+      border: none;
+      border-radius: 30px;
+      box-shadow: 4px 4px 4px variables.$grey-dark;
+      width: 22rem;
+      height: 5rem;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 1.6rem;
+    }
+  }
+}
