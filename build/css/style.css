@@ -54,19 +54,20 @@ h3 {
   margin: 0 0 0.1rem 0;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 2.4rem;
 }
 
-h2 {
+h3 {
   font-size: 2.2rem;
 }
 
-h3 {
+h4 {
   font-size: 1.8rem;
 }
 
-h4 {
+h5 {
   font-size: 1.4rem;
 }
 
@@ -165,4 +166,78 @@ input {
   cursor: pointer;
   display: inline-block;
   margin-top: 1.6rem;
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.functioning__tittle {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.functioning__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.functioning__step__btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000000;
+  background-color: #f6f6f6;
+  border: 1px solid #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px #8a8989;
+  width: 95%;
+  height: 7rem;
+  margin-bottom: 2.7rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.functioning__step__btn:hover {
+  background-color: #e4d5f6;
+  border: 1px solid #e4d5f6;
+}
+.functioning__step__btn:hover .fa {
+  color: #9356dc;
+}
+.functioning__step__badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  position: absolute;
+  z-index: 2;
+  left: -1rem;
+  bottom: 2rem;
+}
+.functioning__step__label {
+  color: #000000;
+}
+.functioning .fa {
+  color: #8a8989;
+  padding-left: 3.7rem;
+}
+.functioning .fa-mobile-alt {
+  font-size: 2rem;
+  padding-right: 2.8rem;
+}
+.functioning .fa-list-ul {
+  font-size: 1.7rem;
+  padding-right: 2.2rem;
+}
+.functioning .fa-store {
+  font-size: 1.6rem;
+  padding-right: 2rem;
 }
