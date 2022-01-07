@@ -40,43 +40,7 @@ input {
     }
 
     &__btn {
-      font-size: 1.6rem;
-      color: variables.$white;
-      background: linear-gradient(variables.$secondary, variables.$primary);
-      border: none;
-      border-radius: 30px;
-      box-shadow: 4px 4px 4px variables.$grey-dark;
-      width: 22rem;
-      height: 5rem;
-      cursor: pointer;
-      display: inline-block;
-      margin-top: 1.6rem;
-      position: relative;
-      z-index: 1;
-
-      &:hover {
-        &::after {
-          opacity: 1;
-        }
-      }
-
-      &::after {
-        content: "";
-        border-radius: 30px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(
-          lighten(variables.$secondary, 5),
-          lighten(variables.$primary, 5)
-        );
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 0.3s;
-        box-shadow: 5px 5px 5px variables.$grey-dark;
-      }
+      @include mixins.btn-submit;
     }
   }
 }

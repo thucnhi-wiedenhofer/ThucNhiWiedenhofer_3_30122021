@@ -5,6 +5,7 @@
 
 .header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 8px variables.$grey;
@@ -15,9 +16,14 @@
     padding-bottom: 1.5rem;
   }
 
-  &__return {
+  &__back {
     width: 5rem;
     padding: 1rem;
+
+    .fa-arrow-left {
+      font-size: 2rem;
+      color: variables.$black;
+    }
   }
 
   &__button {
@@ -25,11 +31,6 @@
     height: 4rem;
     border: none;
     background-color: variables.$white;
-  }
-
-  fa {
-    font-size: 15px;
-    color: variables.$black;
   }
 
   @include mixins.tablet {
