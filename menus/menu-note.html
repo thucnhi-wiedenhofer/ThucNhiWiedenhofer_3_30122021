@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../build/css/normalize.css" />
@@ -16,24 +16,30 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__back">
+    <header class="header__menu">
+      <button class="header__menu__back">
         <a href="../index.html" target="blank">
           <i class="fa fa-arrow-left"></i>
         </a>
-      </div>
+      </button>
       <div class="header__logo">
         <img src="../build/img/ohmyfood.png" alt="logo" />
       </div>
     </header>
 
     <main>
-      <div class="menu-form">
-        <section class="menu-header">
-          <img src="../build/img/note-enchantee.jpg" alt="La note enchantée" />
-          <div class="restau-name">
+      <div class="menu">
+        <section class="menu__head">
+          <img
+            class="menu__head__img"
+            src="../build/img/note-enchantee.jpg"
+            alt="La note enchantée"
+          />
+          <div class="menu__head__name">
             <h1>La note enchantée</h1>
-            <i class="like fa fa-heart"></i>
+            <div class="menu__head__name__heart">
+              <i class="like fa fa-heart"></i>
+            </div>
           </div>
         </section>
 

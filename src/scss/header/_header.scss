@@ -16,21 +16,21 @@
     padding-bottom: 1.5rem;
   }
 
-  &__back {
-    width: 5rem;
-    padding: 1rem;
+  &__menu {
+    @extend .header;
+    position: relative;
 
-    .fa-arrow-left {
-      font-size: 2rem;
-      color: variables.$black;
+    &__back {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      left: 1.5rem;
+
+      .fa-arrow-left {
+        font-size: 2rem;
+        color: variables.$black;
+      }
     }
-  }
-
-  &__button {
-    width: 4rem;
-    height: 4rem;
-    border: none;
-    background-color: variables.$white;
   }
 
   @include mixins.tablet {

@@ -93,7 +93,7 @@ h5 {
 }
 
 /* css header small devices*/
-.header {
+.header, .header__menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -105,28 +105,27 @@ h5 {
   padding-top: 2.2rem;
   padding-bottom: 1.5rem;
 }
-.header__back {
-  width: 5rem;
-  padding: 1rem;
+.header__menu {
+  position: relative;
 }
-.header__back .fa-arrow-left {
+.header__menu__back {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  left: 1.5rem;
+}
+.header__menu__back .fa-arrow-left {
   font-size: 2rem;
   color: #000000;
 }
-.header__button {
-  width: 4rem;
-  height: 4rem;
-  border: none;
-  background-color: #ffffff;
-}
 @media (min-width: 768px) {
-  .header {
+  .header, .header__menu {
     flex-direction: row;
     justify-content: space-around;
   }
 }
 @media (min-width: 1024px) {
-  .header {
+  .header, .header__menu {
     flex-direction: row;
     justify-content: space-around;
   }
@@ -386,8 +385,59 @@ input {
 }
 
 /* css pages menus small devices*/
-.menus {
+.menu {
   background-color: #f6f6f6;
+}
+.menu__head__img {
+  height: 30rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menu__head__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5rem;
+  border-radius: 20%;
+  font-family: "Shrikhand", cursive;
+}
+.menu__head__name__heart {
+  width: 20%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__head__name__heart .fa-heart {
+  font-size: 2.4rem;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.menu__head__name__heart .fa-heart:hover::after {
+  opacity: 1;
+}
+.menu__head__name__heart .fa-heart::after {
+  content: "\f004";
+  font-size: 2.4rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: transparent;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  transition: opacity 0.6s;
 }
 
 /* css footer small devices*/

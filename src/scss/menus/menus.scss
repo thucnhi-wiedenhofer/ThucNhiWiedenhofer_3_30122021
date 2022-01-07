@@ -3,6 +3,26 @@
 
 /* css pages menus small devices*/
 
-.menus {
+.menu {
   background-color: variables.$grey-light;
+
+  &__head {
+    &__img {
+      height: 30rem;
+      width: 100%;
+      object-fit: cover;
+    }
+    &__name {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 5rem;
+      border-radius: 20%;
+      font-family: variables.$font_secondary;
+
+      &__heart {
+        @include mixins.heart;
+      }
+    }
+  }
 }
