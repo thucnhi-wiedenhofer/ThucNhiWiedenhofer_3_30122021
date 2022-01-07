@@ -43,6 +43,13 @@ a {
   text-decoration: none;
 }
 
+ul,
+li {
+  list-style-type: none;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
 img {
   max-width: 100%;
   display: block;

@@ -43,6 +43,15 @@ a {
   text-decoration: none;
 }
 
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margins */
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -269,7 +278,7 @@ input {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  /* background-color: variables.$grey-light;*/
+  background-color: #f6f6f6;
 }
 .restaurants__tittle {
   margin-top: 6rem;
@@ -376,3 +385,32 @@ input {
 }
 
 /* css footer small devices*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 2rem;
+}
+.footer__logo {
+  margin-top: 1.7rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 2.5rem;
+}
+.footer__menu__item {
+  font-size: 1.6rem;
+}
+.footer__menu__item a {
+  color: #ffffff;
+}
+.footer__menu__item a:hover {
+  color: #99e2d0;
+}
+.footer__menu__item .fa {
+  padding-right: 0.5rem;
+}
