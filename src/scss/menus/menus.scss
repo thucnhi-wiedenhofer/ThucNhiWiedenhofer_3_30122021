@@ -65,15 +65,6 @@
   margin: 1.2rem;
   height: 7rem;
 
-  /*animation for fading-in menu cards */
-  animation: fadein ease-in-out 800ms forwards;
-  opacity: 0;
-  @for $i from 1 through 10 {
-    &--#{$i} {
-      animation-delay: 400ms * $i;
-    }
-  }
-
   /*animation checked card when mouse hover */
   &:hover {
     /*text stretching */
@@ -132,7 +123,16 @@
   }
 }
 
-@keyframes fadein {
+/*animation for fading-in menu cards */
+@for $i from 1 through 10 {
+  .order__#{$i} {
+    opacity: 0;
+    animation: fadeIn 500ms ease-in-out forwards;
+    animation-delay: 200ms * $i;
+  }
+}
+
+@keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateY(30px);
