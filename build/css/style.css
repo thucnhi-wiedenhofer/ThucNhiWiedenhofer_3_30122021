@@ -18,7 +18,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url("../../../build/img/menu.png");
   width: 375px;
   margin: 0 auto;
   background-repeat: no-repeat;
@@ -399,11 +398,12 @@ input {
 
 /* css pages menus small devices*/
 .menu {
-  /*  background-color: variables.$grey-light;*/
+  background-color: #f6f6f6;
   /*css button to order*/
 }
-.menu__starter, .menu__main-course, .menu__submit {
+.menu__starter, .menu__main-course, .menu__dessert, .menu__submit {
   padding-bottom: 1rem;
+  opacity: 1;
 }
 .menu p {
   font-size: 1.4rem;
@@ -473,7 +473,7 @@ input {
 .menu__submit {
   display: flex;
   justify-content: center;
-  margin: 3.5rem 0 6rem 0;
+  margin: 1rem 0 6rem 0;
 }
 .menu__submit__btn {
   font-size: 1.6rem;
@@ -514,13 +514,57 @@ input {
   display: flex;
   flex-direction: row;
   border-radius: 1.5rem;
-  /*  background-color: variables.$white;*/
-  box-shadow: 0px 3px 5px 0px #f6f6f6;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 5px 0px #eaeaea;
   cursor: pointer;
   overflow: hidden;
   margin: 1.2rem;
   height: 7rem;
+  /*animation for fading-in menu cards */
+  -webkit-animation: fadein ease-in-out 800ms forwards;
+          animation: fadein ease-in-out 800ms forwards;
+  opacity: 0;
   /*animation checked card when mouse hover */
+}
+.order--1 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.order--2 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+.order--3 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+.order--4 {
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
+}
+.order--5 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+.order--6 {
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
+}
+.order--7 {
+  -webkit-animation-delay: 2800ms;
+          animation-delay: 2800ms;
+}
+.order--8 {
+  -webkit-animation-delay: 3200ms;
+          animation-delay: 3200ms;
+}
+.order--9 {
+  -webkit-animation-delay: 3600ms;
+          animation-delay: 3600ms;
+}
+.order--10 {
+  -webkit-animation-delay: 4000ms;
+          animation-delay: 4000ms;
 }
 .order:hover {
   /*text stretching */
@@ -575,6 +619,27 @@ input {
   transition: all 400ms 100ms ease-in-out;
 }
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* css footer small devices*/
 .footer {
   display: flex;
