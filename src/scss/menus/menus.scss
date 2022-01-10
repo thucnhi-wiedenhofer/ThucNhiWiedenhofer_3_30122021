@@ -5,9 +5,16 @@
 /* css pages menus small devices*/
 
 .menu {
+  &__starter,
+  &__main-course,
+  &__submit {
+    padding-bottom: 1rem;
+  }
+
   p {
     font-size: 1.4rem;
   }
+
   /*  background-color: variables.$grey-light;*/
 
   &__head {
@@ -33,18 +40,18 @@
       }
     }
   }
-
+  /*css button to order*/
   &__submit {
     display: flex;
     justify-content: center;
-    margin: 3rem;
+    margin: 3.5rem 0 6rem 0;
 
     &__btn {
       @include mixins.btn-submit;
     }
   }
 }
-
+/*css menu cards */
 .order {
   display: flex;
   flex-direction: row;

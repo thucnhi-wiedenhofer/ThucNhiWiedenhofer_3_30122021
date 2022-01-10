@@ -400,6 +400,10 @@ input {
 /* css pages menus small devices*/
 .menu {
   /*  background-color: variables.$grey-light;*/
+  /*css button to order*/
+}
+.menu__starter, .menu__main-course, .menu__submit {
+  padding-bottom: 1rem;
 }
 .menu p {
   font-size: 1.4rem;
@@ -469,7 +473,7 @@ input {
 .menu__submit {
   display: flex;
   justify-content: center;
-  margin: 3rem;
+  margin: 3.5rem 0 6rem 0;
 }
 .menu__submit__btn {
   font-size: 1.6rem;
@@ -505,6 +509,7 @@ input {
   box-shadow: 5px 5px 5px #8a8989;
 }
 
+/*css menu cards */
 .order {
   display: flex;
   flex-direction: row;
