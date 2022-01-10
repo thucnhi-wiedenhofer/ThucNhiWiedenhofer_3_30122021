@@ -18,6 +18,7 @@
   }
 }
 
+/*code for button submit */
 @mixin btn-submit {
   font-size: 1.6rem;
   color: variables.$white;
@@ -25,14 +26,14 @@
   border: none;
   border-radius: 30px;
   box-shadow: 4px 4px 4px variables.$grey-dark;
-  width: 22rem;
+  width: 20rem;
   height: 5rem;
   cursor: pointer;
   display: inline-block;
   margin-top: 1.6rem;
   position: relative;
   z-index: 1;
-
+  /*lighter color of button et darker box-shadow when mouse hover*/
   &:hover {
     &::after {
       opacity: 1;
@@ -58,6 +59,7 @@
   }
 }
 
+/*code for animation heart*/
 @mixin heart {
   width: 20%;
   height: 4rem;
@@ -66,6 +68,7 @@
   justify-content: center;
 
   .fa-heart {
+    /*heart empty*/
     font-size: 2.4rem;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
@@ -73,11 +76,19 @@
     cursor: pointer;
     position: relative;
     z-index: 1;
+    /*color heart when mouse hover*/
     &:hover {
       &::after {
         opacity: 1;
       }
     }
+    /* maintain colored heart when click mouse*/
+    &:focus {
+      &::after {
+        opacity: 1;
+      }
+    }
+    /*animation color heart*/
     &::after {
       content: "\f004";
       font-size: 2.4rem;

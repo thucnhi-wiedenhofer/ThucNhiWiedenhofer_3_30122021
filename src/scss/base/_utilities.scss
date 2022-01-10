@@ -7,3 +7,10 @@
 .bg-primary {
   background-color: variables.$primary;
 }
+
+.underlined {
+  padding-bottom: 3px;
+  border-bottom: 3px solid variables.$tertiary;
+  width: 4rem;
+  margin: 2rem;
+}
