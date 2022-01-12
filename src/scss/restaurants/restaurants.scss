@@ -9,13 +9,29 @@
   flex-direction: column;
   background-color: variables.$grey-light;
 
+  @include mixins.desktop;
+  @include mixins.tablet {
+    padding: 0 4rem 3rem 4rem;
+  }
+
+  @include mixins.large-screen {
+    margin: 0 7rem 2rem 7rem;
+    border-radius: 2rem;
+  }
+
   &__tittle {
     margin-top: 6rem;
     margin-bottom: 2rem;
   }
 
   &__list {
-    justify-content: space-around;
+    justify-content: center;
+
+    @include mixins.desktop {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -27,6 +43,12 @@
   box-shadow: 4px 4px 4px variables.$grey;
   background-color: variables.$white;
   margin-bottom: 2rem;
+
+  @include mixins.desktop;
+  @include mixins.tablet {
+    min-width: 35rem;
+    margin: 2rem;
+  }
 
   &__header {
     height: 17.5rem;

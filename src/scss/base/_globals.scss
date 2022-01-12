@@ -2,12 +2,16 @@
 @use "mixins";
 
 html {
-  font-size: 62.5%; /*mobile first*/
+  /*mobile first*/
+  font-size: 62.5%;
   box-sizing: border-box;
-  /*@include mixins.tablet {
-    
-    font-size: 100%;
-  }*/
+
+  @include mixins.tablet {
+    font-size: 80%;
+  }
+  @include mixins.desktop {
+    font-size: 62.5%;
+  }
 }
 
 *,
@@ -18,10 +22,6 @@ html {
 
 body {
   font-family: variables.$font_principal;
-  width: 375px;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
 }
 
 p {
@@ -29,13 +29,6 @@ p {
   font-size: 1.8rem;
   margin-block-start: 0.7em;
   margin-block-end: 0.7em;
-}
-
-/*container pour XL screen*/
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 a {

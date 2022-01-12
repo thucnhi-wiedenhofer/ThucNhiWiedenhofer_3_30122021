@@ -1,13 +1,19 @@
 /*code for button submit */
 /*code for animation heart*/
 html {
-  font-size: 62.5%;
   /*mobile first*/
+  font-size: 62.5%;
   box-sizing: border-box;
-  /*@include mixins.tablet {
-
-    font-size: 100%;
-  }*/
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
 }
 
 *,
@@ -18,10 +24,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  width: 375px;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
 }
 
 p {
@@ -31,13 +33,6 @@ p {
           margin-block-start: 0.7em;
   -webkit-margin-after: 0.7em;
           margin-block-end: 0.7em;
-}
-
-/*container pour XL screen*/
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 a {
@@ -145,6 +140,12 @@ input {
   padding: 0 1.6rem;
 }
 
+@media (min-width: 1280px) {
+  .search {
+    margin: 0 7rem 2rem 7rem;
+    border-radius: 2rem;
+  }
+}
 .search__form {
   display: flex;
   flex-direction: column;
@@ -163,7 +164,7 @@ input {
   background-color: #eaeaea;
   font-size: 1.7rem;
   height: 4.8rem;
-  box-shadow: 0px 4px 2px #8a8989 inset;
+  box-shadow: 0px 1px 3px #8a8989 inset;
 }
 .search__form__tittle {
   margin-top: 4rem;
@@ -213,10 +214,22 @@ input {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+@media (min-width: 1024px) {
+  .functioning__tittle {
+    text-align: center;
+  }
+}
 .functioning__step {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .functioning__step {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .functioning__step__btn {
   display: flex;
@@ -242,6 +255,12 @@ input {
 }
 .functioning__step__btn:hover .fa {
   color: #9356dc;
+}
+@media (min-width: 768px) {
+  .functioning__step__btn {
+    width: 30rem;
+    margin: 2rem;
+  }
 }
 .functioning__step__badge {
   display: flex;
@@ -285,12 +304,30 @@ input {
   flex-direction: column;
   background-color: #f6f6f6;
 }
+@media (min-width: 768px) {
+  .restaurants {
+    padding: 0 4rem 3rem 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .restaurants {
+    margin: 0 7rem 2rem 7rem;
+    border-radius: 2rem;
+  }
+}
 .restaurants__tittle {
   margin-top: 6rem;
   margin-bottom: 2rem;
 }
 .restaurants__list {
-  justify-content: space-around;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .restaurants__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .card {
@@ -301,6 +338,12 @@ input {
   box-shadow: 4px 4px 4px #eaeaea;
   background-color: #ffffff;
   margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .card {
+    min-width: 35rem;
+    margin: 2rem;
+  }
 }
 .card__header {
   height: 17.5rem;
@@ -408,11 +451,16 @@ input {
 .menu p {
   font-size: 1.4rem;
 }
+.menu__head {
+  max-height: 50rem;
+}
 .menu__head__img {
-  height: 30rem;
+  height: 33rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center 60%;
+     object-position: center 60%;
 }
 .menu__head__name {
   display: flex;
@@ -425,6 +473,12 @@ input {
   margin-top: -8rem;
   background-color: #f6f6f6;
   font-family: "Shrikhand", cursive;
+}
+@media (min-width: 1024px) {
+  .menu__head__name {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
 }
 .menu__head__name__heart {
   width: 20%;
@@ -473,7 +527,7 @@ input {
 .menu__submit {
   display: flex;
   justify-content: center;
-  margin: 1rem 0 6rem 0;
+  padding: 1rem 0 6rem 0;
 }
 .menu__submit__btn {
   font-size: 1.6rem;
@@ -521,6 +575,11 @@ input {
   margin: 1.2rem;
   height: 7rem;
   /*animation checked card when mouse hover */
+}
+@media (min-width: 768px) {
+  .order {
+    width: 35rem;
+  }
 }
 .order:hover {
   /*text stretching */
@@ -575,83 +634,83 @@ input {
   transition: all 400ms 100ms ease-in-out;
 }
 
-/*animation for fading-in menu cards */
-.order__1 {
+/*animation for fading-in menu cards one by one with delay*/
+.order-1 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
 }
 
-.order__2 {
+.order-2 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 400ms;
           animation-delay: 400ms;
 }
 
-.order__3 {
+.order-3 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 600ms;
           animation-delay: 600ms;
 }
 
-.order__4 {
+.order-4 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 800ms;
           animation-delay: 800ms;
 }
 
-.order__5 {
+.order-5 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
 }
 
-.order__6 {
+.order-6 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 1200ms;
           animation-delay: 1200ms;
 }
 
-.order__7 {
+.order-7 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 1400ms;
           animation-delay: 1400ms;
 }
 
-.order__8 {
+.order-8 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 1600ms;
           animation-delay: 1600ms;
 }
 
-.order__9 {
+.order-9 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 1800ms;
           animation-delay: 1800ms;
 }
 
-.order__10 {
+.order-10 {
   opacity: 0;
-  -webkit-animation: fadeIn 500ms ease-in-out forwards;
-          animation: fadeIn 500ms ease-in-out forwards;
+  -webkit-animation: fadeIn 300ms ease-in-out forwards;
+          animation: fadeIn 300ms ease-in-out forwards;
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
 }
@@ -659,8 +718,8 @@ input {
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
   }
   100% {
     opacity: 1;
@@ -670,13 +729,24 @@ input {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
   }
   100% {
     opacity: 1;
   }
 }
+/*css only for large screen and tablet */
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
 /* css footer small devices*/
 .footer {
   display: flex;
@@ -689,6 +759,11 @@ input {
   margin-left: 0.5rem;
   margin-bottom: 0.8rem;
 }
+@media (min-width: 768px) {
+  .footer__logo {
+    text-align: center;
+  }
+}
 .footer__menu {
   display: flex;
   flex-direction: column;
@@ -697,6 +772,13 @@ input {
 }
 .footer__menu__item {
   font-size: 1.6rem;
+}
+@media (min-width: 768px) {
+  .footer__menu__item {
+    display: inline-block;
+    margin: 0 2rem;
+    font-size: 110%;
+  }
 }
 .footer__menu__item a {
   color: #ffffff;

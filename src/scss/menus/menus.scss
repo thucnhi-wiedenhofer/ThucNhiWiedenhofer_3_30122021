@@ -20,10 +20,13 @@
   }
 
   &__head {
+    max-height: 50rem;
+
     &__img {
-      height: 30rem;
+      height: 33rem;
       width: 100%;
       object-fit: cover;
+      object-position: center 60%;
     }
     &__name {
       display: flex;
@@ -37,6 +40,11 @@
       background-color: variables.$grey-light;
       font-family: variables.$font_secondary;
 
+      @include mixins.desktop {
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
       &__heart {
         @include mixins.heart;
       }
@@ -46,7 +54,7 @@
   &__submit {
     display: flex;
     justify-content: center;
-    margin: 1rem 0 6rem 0;
+    padding: 1rem 0 6rem 0;
 
     &__btn {
       @include mixins.btn-submit;
@@ -64,6 +72,10 @@
   overflow: hidden;
   margin: 1.2rem;
   height: 7rem;
+  @include mixins.desktop;
+  @include mixins.tablet {
+    width: 35rem;
+  }
 
   /*animation checked card when mouse hover */
   &:hover {
@@ -123,11 +135,11 @@
   }
 }
 
-/*animation for fading-in menu cards */
+/*animation for fading-in menu cards one by one with delay*/
 @for $i from 1 through 10 {
-  .order__#{$i} {
+  .order-#{$i} {
     opacity: 0;
-    animation: fadeIn 500ms ease-in-out forwards;
+    animation: fadeIn 300ms ease-in-out forwards;
     animation-delay: 200ms * $i;
   }
 }
@@ -135,9 +147,20 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(10%);
   }
   100% {
     opacity: 1;
+  }
+}
+/*css only for large screen and tablet */
+.container {
+  @include mixins.desktop;
+  @include mixins.tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
   }
 }

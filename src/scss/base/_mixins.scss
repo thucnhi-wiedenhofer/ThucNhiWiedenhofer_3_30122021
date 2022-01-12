@@ -18,6 +18,12 @@
   }
 }
 
+@mixin large-screen {
+  @media (min-width: variables.$large-screen) {
+    @content;
+  }
+}
+
 /*code for button submit */
 @mixin btn-submit {
   font-size: 1.6rem;

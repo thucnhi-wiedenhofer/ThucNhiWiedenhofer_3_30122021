@@ -13,6 +13,11 @@ input {
 }
 
 .search {
+  @include mixins.large-screen {
+    margin: 0 7rem 2rem 7rem;
+    border-radius: 2rem;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -31,7 +36,7 @@ input {
       background-color: variables.$grey;
       font-size: 1.7rem;
       height: 4.8rem;
-      box-shadow: 0px 4px 2px variables.$grey-dark inset;
+      box-shadow: 0px 1px 3px variables.$grey-dark inset;
     }
 
     &__tittle {
