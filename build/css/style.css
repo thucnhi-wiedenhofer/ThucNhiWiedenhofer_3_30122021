@@ -91,6 +91,74 @@ h4 {
   margin: 2rem;
 }
 
+/*css for background loading page*/
+.loading {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#ff79da, #353535);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: fadeOut 2s forwards;
+          animation: fadeOut 2s forwards;
+  /*css for loading spinner*/
+}
+.loading__spinner {
+  -webkit-animation: spinner 4s ease-in-out;
+          animation: spinner 4s ease-in-out;
+}
+.loading__spinner .fas {
+  font-size: 8rem;
+  color: #99e2d0;
+}
+
+/* Animation for spinner*/
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(3turn);
+            transform: rotate(3turn);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(3turn);
+            transform: rotate(3turn);
+  }
+}
+@-webkit-keyframes fadeOut {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    /* very important if not others animations don't work in Accueil */
+  }
+}
+@keyframes fadeOut {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    /* very important if not others animations don't work in Accueil */
+  }
+}
 /* css header small devices*/
 .header, .header__menu {
   display: flex;
@@ -411,14 +479,13 @@ input {
   position: relative;
   z-index: 1;
   /*color heart when mouse hover*/
-  /* maintain colored heart when click mouse*/
   /*animation color heart*/
 }
 .card__body__heart .fa-heart:hover::after {
   opacity: 1;
-}
-.card__body__heart .fa-heart:focus::after {
-  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  overflow: hidden;
 }
 .card__body__heart .fa-heart::after {
   content: "\f004";
@@ -436,7 +503,9 @@ input {
   bottom: 0;
   left: 0;
   z-index: 2;
-  transition: opacity 0.6s;
+  transition: all 2s ease-out;
+  -webkit-transform: translateY(100%) opacity(1);
+          transform: translateY(100%) opacity(1);
 }
 
 /* css pages menus small devices*/
@@ -497,14 +566,13 @@ input {
   position: relative;
   z-index: 1;
   /*color heart when mouse hover*/
-  /* maintain colored heart when click mouse*/
   /*animation color heart*/
 }
 .menu__head__name__heart .fa-heart:hover::after {
   opacity: 1;
-}
-.menu__head__name__heart .fa-heart:focus::after {
-  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  overflow: hidden;
 }
 .menu__head__name__heart .fa-heart::after {
   content: "\f004";
@@ -522,7 +590,9 @@ input {
   bottom: 0;
   left: 0;
   z-index: 2;
-  transition: opacity 0.6s;
+  transition: all 2s ease-out;
+  -webkit-transform: translateY(100%) opacity(1);
+          transform: translateY(100%) opacity(1);
 }
 .menu__submit {
   display: flex;

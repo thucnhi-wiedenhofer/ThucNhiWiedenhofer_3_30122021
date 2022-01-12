@@ -86,14 +86,11 @@
     &:hover {
       &::after {
         opacity: 1;
+        transform: translateY(0%);
+        overflow: hidden;
       }
     }
-    /* maintain colored heart when click mouse*/
-    &:focus {
-      &::after {
-        opacity: 1;
-      }
-    }
+
     /*animation color heart*/
     &::after {
       content: "\f004";
@@ -111,7 +108,8 @@
       bottom: 0;
       left: 0;
       z-index: 2;
-      transition: opacity 0.6s;
+      transition: all 2s ease-out;
+      transform: translateY(100%) opacity(1);
     }
   }
 }
