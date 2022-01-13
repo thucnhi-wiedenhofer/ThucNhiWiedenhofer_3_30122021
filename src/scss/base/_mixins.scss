@@ -82,10 +82,13 @@
     cursor: pointer;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+
     /*color heart when mouse hover*/
     &:hover {
       &::after {
         opacity: 1;
+        transition: opacity 1s ease-out;
         transform: translateY(0%);
         overflow: hidden;
       }
@@ -108,8 +111,9 @@
       bottom: 0;
       left: 0;
       z-index: 2;
-      transition: all 2s ease-out;
-      transform: translateY(100%) opacity(1);
+      transition: transform 3s ease-out;
+      transform: translateY(100%);
+      overflow: hidden;
     }
   }
 }
