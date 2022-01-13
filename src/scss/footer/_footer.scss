@@ -27,11 +27,15 @@
 
     &__item {
       font-size: 1.6rem;
-      @include mixins.desktop;
       @include mixins.tablet {
         display: inline-block;
         margin: 0 2rem;
         font-size: 110%;
+      }
+      @include mixins.desktop {
+        display: inline-block;
+        margin: 0 2rem;
+        font-size: 140%;
       }
 
       a {
