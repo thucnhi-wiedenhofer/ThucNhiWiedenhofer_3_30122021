@@ -82,6 +82,7 @@
     cursor: pointer;
     position: relative;
     z-index: 1;
+    margin: 1rem;
 
     /*color heart when mouse hover*/
     &:hover {
@@ -89,7 +90,6 @@
         opacity: 1;
         transition: opacity 1s ease-out;
         transform: translateY(0%);
-        overflow: hidden;
       }
     }
 
@@ -112,7 +112,6 @@
       z-index: 2;
       transition: transform 3s ease-out;
       transform: translateY(100%);
-      overflow: hidden;
     }
   }
 }

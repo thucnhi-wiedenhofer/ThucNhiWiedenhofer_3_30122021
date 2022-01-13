@@ -472,6 +472,7 @@ input {
   cursor: pointer;
   position: relative;
   z-index: 1;
+  margin: 1rem;
   /*color heart when mouse hover*/
   /*animation color heart*/
 }
@@ -480,7 +481,6 @@ input {
   transition: opacity 1s ease-out;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
-  overflow: hidden;
 }
 .card__body__heart .fa-heart::after {
   content: "\f004";
@@ -503,7 +503,6 @@ input {
   transition: transform 3s ease-out, -webkit-transform 3s ease-out;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  overflow: hidden;
 }
 
 /* css pages menus small devices*/
@@ -563,6 +562,7 @@ input {
   cursor: pointer;
   position: relative;
   z-index: 1;
+  margin: 1rem;
   /*color heart when mouse hover*/
   /*animation color heart*/
 }
@@ -571,7 +571,6 @@ input {
   transition: opacity 1s ease-out;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
-  overflow: hidden;
 }
 .menu__head__name__heart .fa-heart::after {
   content: "\f004";
@@ -594,7 +593,6 @@ input {
   transition: transform 3s ease-out, -webkit-transform 3s ease-out;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  overflow: hidden;
 }
 .menu__submit {
   display: flex;
