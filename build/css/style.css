@@ -472,7 +472,6 @@ input {
   cursor: pointer;
   position: relative;
   z-index: 1;
-  overflow: hidden;
   /*color heart when mouse hover*/
   /*animation color heart*/
 }
@@ -564,7 +563,6 @@ input {
   cursor: pointer;
   position: relative;
   z-index: 1;
-  overflow: hidden;
   /*color heart when mouse hover*/
   /*animation color heart*/
 }
@@ -674,7 +672,6 @@ input {
 }
 .order__info {
   padding: 1.2rem;
-  line-height: 1.5rem;
   width: 82%;
 }
 .order__info h3,
@@ -690,7 +687,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 1.7rem;
+  padding-bottom: 1.2rem;
 }
 .order__checked {
   display: flex;
