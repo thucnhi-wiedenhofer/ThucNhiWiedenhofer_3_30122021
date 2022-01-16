@@ -100,7 +100,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, #ff79da, #353535);
+  background: linear-gradient(45deg, #353535, #ff79da, #353535);
   -webkit-animation: fadeOut 2s forwards;
           animation: fadeOut 2s forwards;
   /*css for loading spinner*/

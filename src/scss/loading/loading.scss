@@ -9,7 +9,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, variables.$secondary, variables.$brown);
+  background: linear-gradient(
+    45deg,
+    variables.$brown,
+    variables.$secondary,
+    variables.$brown
+  );
   animation: fadeOut 2s forwards;
 
   /*css for loading spinner*/
